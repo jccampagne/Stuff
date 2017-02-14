@@ -4,6 +4,7 @@ module Quaternion where
 import Prelude as P
 
 data Q n = Q n n n n
+    deriving(Show, Eq)
 
 instance Functor Q where
     fmap f (Q a1 ai aj ak) = Q (f a1) (f ai) (f aj) (f ak)
