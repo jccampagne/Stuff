@@ -42,7 +42,13 @@ instance (RealFloat n) => Num (Q n) where
 
     signum = undefined
 
+conj :: Num a => Q a -> Q a
 conj (Q a1 ai aj ak) = Q a1 (-ai) (-aj) (-ak)
+
+norm :: RealFloat a => Q a -> a
+norm q =
+    let Q n 0 0 0 = abs q in
+    n
 
 test :: Q Double
 test =
