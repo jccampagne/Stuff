@@ -1,6 +1,8 @@
 module Test.TestQuaternion where
 
-import Distribution.TestSuite
+import Test.HUnit
+test1 = TestCase (assertEqual "for (foo 3)," (1,2) (foo 3))
 
-tests :: IO [Test]
+
+
 tests = return []

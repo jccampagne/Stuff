@@ -15,17 +15,18 @@ extra-source-files:  README.md
 
 library
     build-depends:   base
-    exposed-modules:  Quaternion
+    exposed-modules: Quaternion
     hs-source-dirs:  src
     build-depends:   base
 
 test-suite test
-    type: detailed-0.9
+    type: exitcode-stdio-1.0
+    main-is: Main.hs
     hs-source-dirs: test
-    test-module: Test.TestQuaternion
+    other-modules: Test.TestQuaternion
     build-depends: base
-                 , hspec
                  , Cabal
+                 , HUnit
 
 executable Stuff
   hs-source-dirs:      src
