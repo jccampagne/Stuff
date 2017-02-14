@@ -1,12 +1,12 @@
-module Test.TestQuaternion (tests) where
-
 {-# Language ScopedTypeVariables #-}
+
+module Test.TestQuaternion (tests) where
 
 import Test.HUnit
 import Quaternion
 
 qTest =
-    let v = Q 1 2 3 4 in
+    let v :: Quaternion.Q Double = Q 1 2 3 4 in
     let r = negate $ negate $ Q 1 2 3 4 in
     TestCase $ assertEqual "same" v r
 
