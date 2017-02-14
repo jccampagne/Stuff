@@ -27,6 +27,7 @@ test-suite test
     build-depends: base
                  , Cabal
                  , HUnit
+                 , Stuff
 
 executable Stuff
   hs-source-dirs:      src
